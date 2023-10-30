@@ -11,7 +11,13 @@ package com.neotech.pages;
 
 		@FindBy(id = "account-name")
 		public WebElement accountName;
-
+		
+		@FindBy(xpath = "//*[@id=\"user-dropdown\"]")
+		public WebElement dropdown;
+		
+		@FindBy(xpath = "//a[@id='logoutLink']")
+		public WebElement logOut;
+		
 		@FindBy(id = "menu_pim_viewPimModule")
 		public WebElement PIM;
 
@@ -21,6 +27,7 @@ package com.neotech.pages;
 		@FindBy(id = "menu_pim_viewEmployeeList")
 		public WebElement employeeList;
 
+		
 		public DashboardPageElements() {
 			PageFactory.initElements(driver, this);
 		}
